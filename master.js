@@ -10,6 +10,11 @@ var restart = document.querySelector('#b');
 // object (2) table squares
 var squares = document.querySelectorAll('td');
 
+// object (3) heading one 
+var header = document.querySelector("h1")
+
+
+
 
 
 
@@ -36,13 +41,19 @@ function switcher(){
       }
 };
 
+function getRandomColor(){
+  var letters = "0123456789ABCDEF";
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random()*16)];
+  }
+  return color
+}
 
-
-
-
-
-
-
+function changeHeaderColor(){
+  colorInput = getRandomColor()
+  header.style.color = colorInput;
+}
 
 
 
@@ -63,3 +74,10 @@ for (var i = 0; i < squares.length; i++) {
     squares[i].addEventListener('click', switcher);
     // squares[i].click(switcher);
 }
+
+
+
+////////////////////
+// other execution//
+////////////////////
+setInterval("changeHeaderColor()",500);

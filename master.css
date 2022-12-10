@@ -5,3 +5,13 @@ td{
    font-size: 100px;
    text-align: center;
 }
+h1{
+   /* margin: 100px 20px 100px 400px; */
+   margin: 80px;
+   text-align: center;
+}
+p{
+   margin: 20px;
+   text-align: center;
+ 
+}
